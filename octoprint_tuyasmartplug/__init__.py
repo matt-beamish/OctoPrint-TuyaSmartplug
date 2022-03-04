@@ -11,7 +11,7 @@ import re
 import threading
 import time
 
-from octoprint_tuyasmartplug.utils import pytuya
+from octoprint_tuyasmartplug.utils.tinytuya import tinytuya
 
 
 class tuyasmartplugPlugin(
@@ -269,7 +269,8 @@ class tuyasmartplugPlugin(
         plug = self.plug_search(
             self._settings.get(["arrSmartplugs"]), "label", pluglabel
         )
-        device = pytuya.OutletDevice(plug["id"], plug["ip"], plug["localKey"])
+        device = tinytuya.OutletDevice(plug["id"], plug["ip"], plug["localKey"])
+        # device = pytuya.OutletDevice(plug["id"], plug["ip"], plug["localKey"])
         if plug.get("v33"):
             device.version = 3.3
 
@@ -414,11 +415,11 @@ class tuyasmartplugPlugin(
                 displayVersion=self._plugin_version,
                 # version check: github repository
                 type="github_release",
-                user="ziirish",
+                user="matt-beamish",
                 repo="OctoPrint-TuyaSmartplug",
                 current=self._plugin_version,
                 # update method: pip
-                pip="https://github.com/ziirish/OctoPrint-TuyaSmartplug/archive/{target_version}.zip",
+                pip="https://github.com/matt-beamish/OctoPrint-TuyaSmartplug/archive/{target_version}.zip",
             )
         )
 
@@ -427,7 +428,7 @@ class tuyasmartplugPlugin(
 # ("OctoPrint-PluginSkeleton"), you may define that here. Same goes for the other metadata derived from setup.py that
 # can be overwritten via __plugin_xyz__ control properties. See the documentation for that.
 __plugin_name__ = "Tuya Smartplug"
-__plugin_version__ = "0.3.0"
+__plugin_version__ = "0.4.0"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
 

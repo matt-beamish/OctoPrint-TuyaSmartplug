@@ -4,15 +4,15 @@ layout: plugin
 id: tplinksmartplug
 title: OctoPrint-TPLinkSmartplug
 description: Simple plugin to control TP-Link Smartplug
-author: jneilliii
+author: matt-beamish
 license: AGPLv3
 
 # TODO
-date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
+date: 2022-03-04
 
-homepage: https://github.com/jneilliii/OctoPrint-TPLinkSmartplug
-source: https://github.com/jneilliii/OctoPrint-TPLinkSmartplug
-archive: https://github.com/jneilliii/OctoPrint-TPLinkSmartplug/archive/master.zip
+homepage: https://github.com/matt-beamish/OctoPrint-TPLinkSmartplug
+source: https://github.com/matt-beamish/OctoPrint-TPLinkSmartplug
+archive: https://github.com/matt-beamish/OctoPrint-TPLinkSmartplug/archive/master.zip
 
 # TODO
 # Set this to true if your plugin uses the dependency_links setup parameter to include
